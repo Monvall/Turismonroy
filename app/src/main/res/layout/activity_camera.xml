@@ -1,0 +1,73 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Botón de regresar en la esquina superior izquierda -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageButton
+        android:id="@+id/button_cancel_foto"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Cancel Recording"
+        android:src="@drawable/ic_regresar" />
+
+    <!-- Botón para cambiar entre cámaras, ubicado en la esquina superior derecha -->
+    <ImageButton
+        android:id="@+id/button_switch_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_camarasele"
+    android:background="?android:attr/selectableItemBackgroundBorderless"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentEnd="true"
+    android:layout_margin="16dp"
+    android:contentDescription="Cambiar cámara" />
+
+    <!-- Botón de captura de fotos en la parte inferior, centrado -->
+
+    <ImageButton
+        android:id="@+id/button_take_photo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_foto"
+        android:layout_above="@id/zoom_seekbar"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+
+        android:layout_centerHorizontal="true"
+        android:contentDescription="Capturar foto" />
+
+    <SeekBar
+        android:id="@+id/zoom_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="20"
+        android:layout_alignParentBottom="true"
+        android:padding="8dp" />
+
+
+<androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/gallery_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_above="@id/button_take_photo"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        tools:listitem="@layout/item_media" />
+
+
+
+</RelativeLayout>

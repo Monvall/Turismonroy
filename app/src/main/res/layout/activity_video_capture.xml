@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Vista previa de la cámara -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Botón para cambiar la cámara -->
+    <ImageButton
+        android:id="@+id/button_switch_camera"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Switch Camera"
+        android:src="@drawable/ic_camarasele" />
+
+    <!-- SeekBar para el control de zoom -->
+    <SeekBar
+        android:id="@+id/zoom_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:max="20"
+        android:progress="0" />
+
+    <!-- Botón de grabación de video -->
+    <ImageButton
+        android:id="@+id/button_record"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/zoom_seekbar"
+        android:layout_marginBottom="16dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Record Video"
+        android:src="@drawable/ic_record_start" />
+
+    <!-- Botón de cancelación de grabación -->
+    <ImageButton
+        android:id="@+id/button_cancel_recording"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Cancel Recording"
+        android:src="@drawable/ic_regresar" />
+
+</RelativeLayout>
